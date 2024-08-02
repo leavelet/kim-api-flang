@@ -66,18 +66,16 @@ module kim_numbering_module
   !! \sa KIM::NUMBERING::zeroBased, KIM_NUMBERING_zeroBased
   !!
   !! \since 2.0
-  type(kim_numbering_type), protected, save, &
-    bind(c, name="KIM_NUMBERING_zeroBased") &
-    :: KIM_NUMBERING_ZERO_BASED
-
+  type(kim_numbering_type), parameter :: &
+    KIM_NUMBERING_ZERO_BASED = kim_numbering_type(0)
+  
   !> \brief \copybrief KIM::NUMBERING::oneBased
   !!
   !! \sa KIM::NUMBERING::oneBased, KIM_NUMBERING_oneBased
   !!
   !! \since 2.0
-  type(kim_numbering_type), protected, save, &
-    bind(c, name="KIM_NUMBERING_oneBased") &
-    :: KIM_NUMBERING_ONE_BASED
+  type(kim_numbering_type), parameter :: &
+    KIM_NUMBERING_ONE_BASED = kim_numbering_type(1)
 
   !> \brief \copybrief KIM::Numbering::Known
   !!

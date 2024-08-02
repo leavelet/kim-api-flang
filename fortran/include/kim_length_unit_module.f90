@@ -56,12 +56,12 @@ module kim_length_unit_module
     kim_get_number_of_length_units, &
     kim_get_length_unit
 
-  !> \brief \copybrief KIM::LengthUnit
-  !!
-  !! \sa KIM::LengthUnit, KIM_LengthUnit
-  !!
-  !! \since 2.0
-  type, bind(c) :: kim_length_unit_type
+!> \brief \copybrief KIM::LengthUnit
+!!
+!! \sa KIM::LengthUnit, KIM_LengthUnit
+!!
+!! \since 2.0
+    type, bind(c) :: kim_length_unit_type
     !> \brief \copybrief KIM::LengthUnit::lengthUnitID
     !!
     !! \sa KIM::LengthUnit::lengthUnitID, KIM_LengthUnit::lengthUnitID
@@ -69,60 +69,54 @@ module kim_length_unit_module
     !! \since 2.0
     integer(c_int) length_unit_id
   end type kim_length_unit_type
-
+  
   !> \brief \copybrief KIM::LENGTH_UNIT::unused
   !!
   !! \sa KIM::LENGTH_UNIT::unused, KIM_LENGTH_UNIT_unused
   !!
   !! \since 2.0
-  type(kim_length_unit_type), protected, save, &
-    bind(c, name="KIM_LENGTH_UNIT_unused") &
-    :: KIM_LENGTH_UNIT_UNUSED
-
+  type(kim_length_unit_type), parameter :: &
+    KIM_LENGTH_UNIT_UNUSED = kim_length_unit_type(0)
+  
   !> \brief \copybrief KIM::LENGTH_UNIT::A
   !!
   !! \sa KIM::LENGTH_UNIT::A, KIM_LENGTH_UNIT_A
   !!
   !! \since 2.0
-  type(kim_length_unit_type), protected, save, &
-    bind(c, name="KIM_LENGTH_UNIT_A") &
-    :: KIM_LENGTH_UNIT_A
-
+  type(kim_length_unit_type), parameter :: &
+    KIM_LENGTH_UNIT_A = kim_length_unit_type(1)
+  
   !> \brief \copybrief KIM::LENGTH_UNIT::Bohr
   !!
   !! \sa KIM::LENGTH_UNIT::Bohr, KIM_LENGTH_UNIT_Bohr
   !!
   !! \since 2.0
-  type(kim_length_unit_type), protected, save, &
-    bind(c, name="KIM_LENGTH_UNIT_Bohr") &
-    :: KIM_LENGTH_UNIT_BOHR
-
+  type(kim_length_unit_type), parameter :: &
+    KIM_LENGTH_UNIT_BOHR = kim_length_unit_type(2)
+  
   !> \brief \copybrief KIM::LENGTH_UNIT::cm
   !!
   !! \sa KIM::LENGTH_UNIT::cm, KIM_LENGTH_UNIT_cm
   !!
   !! \since 2.0
-  type(kim_length_unit_type), protected, save, &
-    bind(c, name="KIM_LENGTH_UNIT_cm") &
-    :: KIM_LENGTH_UNIT_CM
-
+  type(kim_length_unit_type), parameter :: &
+    KIM_LENGTH_UNIT_CM = kim_length_unit_type(3)
+  
   !> \brief \copybrief KIM::LENGTH_UNIT::m
   !!
   !! \sa KIM::LENGTH_UNIT::m, KIM_LENGTH_UNIT_m
   !!
   !! \since 2.0
-  type(kim_length_unit_type), protected, save, &
-    bind(c, name="KIM_LENGTH_UNIT_m") &
-    :: KIM_LENGTH_UNIT_M
-
+  type(kim_length_unit_type), parameter :: &
+    KIM_LENGTH_UNIT_M = kim_length_unit_type(4)
+  
   !> \brief \copybrief KIM::LENGTH_UNIT::nm
   !!
   !! \sa KIM::LENGTH_UNIT::nm, KIM_LENGTH_UNIT_nm
   !!
   !! \since 2.0
-  type(kim_length_unit_type), protected, save, &
-    bind(c, name="KIM_LENGTH_UNIT_nm") &
-    :: KIM_LENGTH_UNIT_NM
+  type(kim_length_unit_type), parameter :: &
+    KIM_LENGTH_UNIT_NM = kim_length_unit_type(5)
 
   !> \brief \copybrief KIM::LengthUnit::Known
   !!

@@ -39,8 +39,8 @@ module kim_species_name_module
 
   public &
     ! Derived types
-    kim_species_name_type, &
-    ! Constants
+  kim_species_name_type, &
+  ! Constants
     KIM_SPECIES_NAME_ELECTRON, &
     KIM_SPECIES_NAME_H, &
     KIM_SPECIES_NAME_HE, &
@@ -203,1251 +203,1112 @@ module kim_species_name_module
   !! \sa KIM::SPECIES_NAME::electron, KIM_SPECIES_NAME_electron
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_electron") &
-    :: KIM_SPECIES_NAME_ELECTRON
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_ELECTRON = kim_species_name_type(0)
 
   !> \brief \copybrief KIM::SPECIES_NAME::H
   !!
   !! \sa KIM::SPECIES_NAME::H, KIM_SPECIES_NAME_H
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_H") &
-    :: KIM_SPECIES_NAME_H
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_H = kim_species_name_type(1)
 
   !> \brief \copybrief KIM::SPECIES_NAME::He
   !!
   !! \sa KIM::SPECIES_NAME::He, KIM_SPECIES_NAME_He
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_He") &
-    :: KIM_SPECIES_NAME_HE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_HE = kim_species_name_type(2)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Li
   !!
   !! \sa KIM::SPECIES_NAME::Li, KIM_SPECIES_NAME_Li
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Li") &
-    :: KIM_SPECIES_NAME_LI
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_LI = kim_species_name_type(3)
 
-  !> \brief \copybrief KIM::SPECIES_NAME::Be
+  !> \brief \copybrief KIM::SPECIES_NAME::Be  
   !!
   !! \sa KIM::SPECIES_NAME::Be, KIM_SPECIES_NAME_Be
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Be") &
-    :: KIM_SPECIES_NAME_BE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_BE = kim_species_name_type(4)
 
   !> \brief \copybrief KIM::SPECIES_NAME::B
-  !!
+  !!  
   !! \sa KIM::SPECIES_NAME::B, KIM_SPECIES_NAME_B
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_B") &
-    :: KIM_SPECIES_NAME_B
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_B = kim_species_name_type(5)
 
   !> \brief \copybrief KIM::SPECIES_NAME::C
   !!
-  !! \sa KIM::SPECIES_NAME::C, KIM_SPECIES_NAME_C
+  !! \sa KIM::SPECIES_NAME::C, KIM_SPECIES_NAME_C  
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_C") &
-    :: KIM_SPECIES_NAME_C
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_C = kim_species_name_type(6)
 
   !> \brief \copybrief KIM::SPECIES_NAME::N
   !!
   !! \sa KIM::SPECIES_NAME::N, KIM_SPECIES_NAME_N
-  !!
+  !!  
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_N") &
-    :: KIM_SPECIES_NAME_N
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_N = kim_species_name_type(7)
 
   !> \brief \copybrief KIM::SPECIES_NAME::O
   !!
   !! \sa KIM::SPECIES_NAME::O, KIM_SPECIES_NAME_O
   !!
-  !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_O") &
-    :: KIM_SPECIES_NAME_O
+  !! \since 2.0  
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_O = kim_species_name_type(8)
 
   !> \brief \copybrief KIM::SPECIES_NAME::F
   !!
   !! \sa KIM::SPECIES_NAME::F, KIM_SPECIES_NAME_F
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_F") &
-    :: KIM_SPECIES_NAME_F
+  type(kim_species_name_type), parameter :: &  
+    KIM_SPECIES_NAME_F = kim_species_name_type(9)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ne
   !!
   !! \sa KIM::SPECIES_NAME::Ne, KIM_SPECIES_NAME_Ne
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ne") &
-    :: KIM_SPECIES_NAME_NE
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NE = kim_species_name_type(10)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Na
   !!
   !! \sa KIM::SPECIES_NAME::Na, KIM_SPECIES_NAME_Na
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Na") &
-    :: KIM_SPECIES_NAME_NA
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NA = kim_species_name_type(11)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Mg
   !!
   !! \sa KIM::SPECIES_NAME::Mg, KIM_SPECIES_NAME_Mg
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Mg") &
-    :: KIM_SPECIES_NAME_MG
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_MG = kim_species_name_type(12)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Al
   !!
   !! \sa KIM::SPECIES_NAME::Al, KIM_SPECIES_NAME_Al
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Al") &
-    :: KIM_SPECIES_NAME_AL
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AL = kim_species_name_type(13)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Si
   !!
   !! \sa KIM::SPECIES_NAME::Si, KIM_SPECIES_NAME_Si
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Si") &
-    :: KIM_SPECIES_NAME_SI
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SI = kim_species_name_type(14)
 
   !> \brief \copybrief KIM::SPECIES_NAME::P
   !!
   !! \sa KIM::SPECIES_NAME::P, KIM_SPECIES_NAME_P
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_P") &
-    :: KIM_SPECIES_NAME_P
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_P = kim_species_name_type(15)
 
   !> \brief \copybrief KIM::SPECIES_NAME::S
   !!
   !! \sa KIM::SPECIES_NAME::S, KIM_SPECIES_NAME_S
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_S") &
-    :: KIM_SPECIES_NAME_S
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_S = kim_species_name_type(16)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cl
   !!
   !! \sa KIM::SPECIES_NAME::Cl, KIM_SPECIES_NAME_Cl
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cl") &
-    :: KIM_SPECIES_NAME_CL
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CL = kim_species_name_type(17)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ar
   !!
   !! \sa KIM::SPECIES_NAME::Ar, KIM_SPECIES_NAME_Ar
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ar") &
-    :: KIM_SPECIES_NAME_AR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AR = kim_species_name_type(18)
 
   !> \brief \copybrief KIM::SPECIES_NAME::K
   !!
   !! \sa KIM::SPECIES_NAME::K, KIM_SPECIES_NAME_K
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_K") &
-    :: KIM_SPECIES_NAME_K
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_K = kim_species_name_type(19)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ca
   !!
   !! \sa KIM::SPECIES_NAME::Ca, KIM_SPECIES_NAME_Ca
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ca") &
-    :: KIM_SPECIES_NAME_CA
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CA = kim_species_name_type(20)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Sc
   !!
   !! \sa KIM::SPECIES_NAME::Sc, KIM_SPECIES_NAME_Sc
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Sc") &
-    :: KIM_SPECIES_NAME_SC
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SC = kim_species_name_type(21)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ti
   !!
   !! \sa KIM::SPECIES_NAME::Ti, KIM_SPECIES_NAME_Ti
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ti") &
-    :: KIM_SPECIES_NAME_TI
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TI = kim_species_name_type(22)
 
   !> \brief \copybrief KIM::SPECIES_NAME::V
   !!
   !! \sa KIM::SPECIES_NAME::V, KIM_SPECIES_NAME_V
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_V") &
-    :: KIM_SPECIES_NAME_V
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_V = kim_species_name_type(23)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cr
   !!
   !! \sa KIM::SPECIES_NAME::Cr, KIM_SPECIES_NAME_Cr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cr") &
-    :: KIM_SPECIES_NAME_CR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CR = kim_species_name_type(24)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Mn
   !!
   !! \sa KIM::SPECIES_NAME::Mn, KIM_SPECIES_NAME_Mn
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Mn") &
-    :: KIM_SPECIES_NAME_MN
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_MN = kim_species_name_type(25)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Fe
   !!
   !! \sa KIM::SPECIES_NAME::Fe, KIM_SPECIES_NAME_Fe
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Fe") &
-    :: KIM_SPECIES_NAME_FE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_FE = kim_species_name_type(26)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Co
   !!
   !! \sa KIM::SPECIES_NAME::Co, KIM_SPECIES_NAME_Co
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Co") &
-    :: KIM_SPECIES_NAME_CO
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CO = kim_species_name_type(27)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ni
   !!
   !! \sa KIM::SPECIES_NAME::Ni, KIM_SPECIES_NAME_Ni
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ni") &
-    :: KIM_SPECIES_NAME_NI
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NI = kim_species_name_type(28)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cu
   !!
   !! \sa KIM::SPECIES_NAME::Cu, KIM_SPECIES_NAME_Cu
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cu") &
-    :: KIM_SPECIES_NAME_CU
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CU = kim_species_name_type(29)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Zn
   !!
   !! \sa KIM::SPECIES_NAME::Zn, KIM_SPECIES_NAME_Zn
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Zn") &
-    :: KIM_SPECIES_NAME_ZN
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_ZN = kim_species_name_type(30)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ga
   !!
   !! \sa KIM::SPECIES_NAME::Ga, KIM_SPECIES_NAME_Ga
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ga") &
-    :: KIM_SPECIES_NAME_GA
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_GA = kim_species_name_type(31)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ge
   !!
   !! \sa KIM::SPECIES_NAME::Ge, KIM_SPECIES_NAME_Ge
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ge") &
-    :: KIM_SPECIES_NAME_GE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_GE = kim_species_name_type(32)
 
   !> \brief \copybrief KIM::SPECIES_NAME::As
   !!
   !! \sa KIM::SPECIES_NAME::As, KIM_SPECIES_NAME_As
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_As") &
-    :: KIM_SPECIES_NAME_AS
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AS = kim_species_name_type(33)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Se
   !!
   !! \sa KIM::SPECIES_NAME::Se, KIM_SPECIES_NAME_Se
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Se") &
-    :: KIM_SPECIES_NAME_SE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SE = kim_species_name_type(34)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Br
   !!
   !! \sa KIM::SPECIES_NAME::Br, KIM_SPECIES_NAME_Br
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Br") &
-    :: KIM_SPECIES_NAME_BR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_BR = kim_species_name_type(35)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Kr
   !!
   !! \sa KIM::SPECIES_NAME::Kr, KIM_SPECIES_NAME_Kr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Kr") &
-    :: KIM_SPECIES_NAME_KR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_KR = kim_species_name_type(36)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Rb
   !!
   !! \sa KIM::SPECIES_NAME::Rb, KIM_SPECIES_NAME_Rb
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Rb") &
-    :: KIM_SPECIES_NAME_RB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RB = kim_species_name_type(37)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Sr
   !!
   !! \sa KIM::SPECIES_NAME::Sr, KIM_SPECIES_NAME_Sr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Sr") &
-    :: KIM_SPECIES_NAME_SR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SR = kim_species_name_type(38)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Y
   !!
   !! \sa KIM::SPECIES_NAME::Y, KIM_SPECIES_NAME_Y
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Y") &
-    :: KIM_SPECIES_NAME_Y
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_Y = kim_species_name_type(39)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Zr
   !!
   !! \sa KIM::SPECIES_NAME::Zr, KIM_SPECIES_NAME_Zr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Zr") &
-    :: KIM_SPECIES_NAME_ZR
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_ZR = kim_species_name_type(40)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Nb
   !!
   !! \sa KIM::SPECIES_NAME::Nb, KIM_SPECIES_NAME_Nb
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Nb") &
-    :: KIM_SPECIES_NAME_NB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NB = kim_species_name_type(41)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Mo
   !!
   !! \sa KIM::SPECIES_NAME::Mo, KIM_SPECIES_NAME_Mo
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Mo") &
-    :: KIM_SPECIES_NAME_MO
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_MO = kim_species_name_type(42)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Tc
   !!
   !! \sa KIM::SPECIES_NAME::Tc, KIM_SPECIES_NAME_Tc
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Tc") &
-    :: KIM_SPECIES_NAME_TC
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TC = kim_species_name_type(43)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ru
   !!
   !! \sa KIM::SPECIES_NAME::Ru, KIM_SPECIES_NAME_Ru
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ru") &
-    :: KIM_SPECIES_NAME_RU
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RU = kim_species_name_type(44)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Rh
   !!
   !! \sa KIM::SPECIES_NAME::Rh, KIM_SPECIES_NAME_Rh
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Rh") &
-    :: KIM_SPECIES_NAME_RH
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RH = kim_species_name_type(45)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pd
   !!
   !! \sa KIM::SPECIES_NAME::Pd, KIM_SPECIES_NAME_Pd
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pd") &
-    :: KIM_SPECIES_NAME_PD
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PD = kim_species_name_type(46)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ag
   !!
   !! \sa KIM::SPECIES_NAME::Ag, KIM_SPECIES_NAME_Ag
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ag") &
-    :: KIM_SPECIES_NAME_AG
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AG = kim_species_name_type(47)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cd
   !!
   !! \sa KIM::SPECIES_NAME::Cd, KIM_SPECIES_NAME_Cd
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cd") &
-    :: KIM_SPECIES_NAME_CD
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CD = kim_species_name_type(48)
 
   !> \brief \copybrief KIM::SPECIES_NAME::In
   !!
   !! \sa KIM::SPECIES_NAME::In, KIM_SPECIES_NAME_In
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_In") &
-    :: KIM_SPECIES_NAME_IN
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_IN = kim_species_name_type(49)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Sn
   !!
   !! \sa KIM::SPECIES_NAME::Sn, KIM_SPECIES_NAME_Sn
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Sn") &
-    :: KIM_SPECIES_NAME_SN
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SN = kim_species_name_type(50)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Sb
   !!
   !! \sa KIM::SPECIES_NAME::Sb, KIM_SPECIES_NAME_Sb
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Sb") &
-    :: KIM_SPECIES_NAME_SB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SB = kim_species_name_type(51)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Te
   !!
   !! \sa KIM::SPECIES_NAME::Te, KIM_SPECIES_NAME_Te
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Te") &
-    :: KIM_SPECIES_NAME_TE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TE = kim_species_name_type(52)
 
   !> \brief \copybrief KIM::SPECIES_NAME::I
   !!
   !! \sa KIM::SPECIES_NAME::I, KIM_SPECIES_NAME_I
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_I") &
-    :: KIM_SPECIES_NAME_I
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_I = kim_species_name_type(53)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Xe
   !!
   !! \sa KIM::SPECIES_NAME::Xe, KIM_SPECIES_NAME_Xe
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Xe") &
-    :: KIM_SPECIES_NAME_XE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_XE = kim_species_name_type(54)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cs
   !!
   !! \sa KIM::SPECIES_NAME::Cs, KIM_SPECIES_NAME_Cs
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cs") &
-    :: KIM_SPECIES_NAME_CS
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CS = kim_species_name_type(55)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ba
   !!
   !! \sa KIM::SPECIES_NAME::Ba, KIM_SPECIES_NAME_Ba
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ba") &
-    :: KIM_SPECIES_NAME_BA
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_BA = kim_species_name_type(56)
 
   !> \brief \copybrief KIM::SPECIES_NAME::La
   !!
   !! \sa KIM::SPECIES_NAME::La, KIM_SPECIES_NAME_La
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_La") &
-    :: KIM_SPECIES_NAME_LA
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_LA = kim_species_name_type(57)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ce
   !!
   !! \sa KIM::SPECIES_NAME::Ce, KIM_SPECIES_NAME_Ce
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ce") &
-    :: KIM_SPECIES_NAME_CE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CE = kim_species_name_type(58)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pr
   !!
   !! \sa KIM::SPECIES_NAME::Pr, KIM_SPECIES_NAME_Pr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pr") &
-    :: KIM_SPECIES_NAME_PR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PR = kim_species_name_type(59)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Nd
   !!
   !! \sa KIM::SPECIES_NAME::Nd, KIM_SPECIES_NAME_Nd
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Nd") &
-    :: KIM_SPECIES_NAME_ND
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_ND = kim_species_name_type(60)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pm
   !!
   !! \sa KIM::SPECIES_NAME::Pm, KIM_SPECIES_NAME_Pm
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pm") &
-    :: KIM_SPECIES_NAME_PM
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PM = kim_species_name_type(61)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Sm
   !!
   !! \sa KIM::SPECIES_NAME::Sm, KIM_SPECIES_NAME_Sm
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Sm") &
-    :: KIM_SPECIES_NAME_SM
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SM = kim_species_name_type(62)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Eu
   !!
   !! \sa KIM::SPECIES_NAME::Eu, KIM_SPECIES_NAME_Eu
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Eu") &
-    :: KIM_SPECIES_NAME_EU
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_EU = kim_species_name_type(63)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Gd
   !!
   !! \sa KIM::SPECIES_NAME::Gd, KIM_SPECIES_NAME_Gd
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Gd") &
-    :: KIM_SPECIES_NAME_GD
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_GD = kim_species_name_type(64)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Tb
   !!
   !! \sa KIM::SPECIES_NAME::Tb, KIM_SPECIES_NAME_Tb
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Tb") &
-    :: KIM_SPECIES_NAME_TB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TB = kim_species_name_type(65)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Dy
   !!
   !! \sa KIM::SPECIES_NAME::Dy, KIM_SPECIES_NAME_Dy
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Dy") &
-    :: KIM_SPECIES_NAME_DY
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_DY = kim_species_name_type(66)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ho
   !!
   !! \sa KIM::SPECIES_NAME::Ho, KIM_SPECIES_NAME_Ho
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ho") &
-    :: KIM_SPECIES_NAME_HO
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_HO = kim_species_name_type(67)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Er
   !!
   !! \sa KIM::SPECIES_NAME::Er, KIM_SPECIES_NAME_Er
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Er") &
-    :: KIM_SPECIES_NAME_ER
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_ER = kim_species_name_type(68)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Tm
   !!
   !! \sa KIM::SPECIES_NAME::Tm, KIM_SPECIES_NAME_Tm
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Tm") &
-    :: KIM_SPECIES_NAME_TM
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TM = kim_species_name_type(69)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Yb
   !!
   !! \sa KIM::SPECIES_NAME::Yb, KIM_SPECIES_NAME_Yb
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Yb") &
-    :: KIM_SPECIES_NAME_YB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_YB = kim_species_name_type(70)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Lu
   !!
   !! \sa KIM::SPECIES_NAME::Lu, KIM_SPECIES_NAME_Lu
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Lu") &
-    :: KIM_SPECIES_NAME_LU
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_LU = kim_species_name_type(71)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Hf
   !!
   !! \sa KIM::SPECIES_NAME::Hf, KIM_SPECIES_NAME_Hf
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Hf") &
-    :: KIM_SPECIES_NAME_HF
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_HF = kim_species_name_type(72)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ta
   !!
   !! \sa KIM::SPECIES_NAME::Ta, KIM_SPECIES_NAME_Ta
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ta") &
-    :: KIM_SPECIES_NAME_TA
+    type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TA = kim_species_name_type(73)
 
   !> \brief \copybrief KIM::SPECIES_NAME::W
   !!
   !! \sa KIM::SPECIES_NAME::W, KIM_SPECIES_NAME_W
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_W") &
-    :: KIM_SPECIES_NAME_W
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_W = kim_species_name_type(74)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Re
   !!
   !! \sa KIM::SPECIES_NAME::Re, KIM_SPECIES_NAME_Re
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Re") &
-    :: KIM_SPECIES_NAME_RE
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RE = kim_species_name_type(75)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Os
   !!
   !! \sa KIM::SPECIES_NAME::Os, KIM_SPECIES_NAME_Os
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Os") &
-    :: KIM_SPECIES_NAME_OS
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_OS = kim_species_name_type(76)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ir
   !!
   !! \sa KIM::SPECIES_NAME::Ir, KIM_SPECIES_NAME_Ir
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ir") &
-    :: KIM_SPECIES_NAME_IR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_IR = kim_species_name_type(77)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pt
   !!
   !! \sa KIM::SPECIES_NAME::Pt, KIM_SPECIES_NAME_Pt
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pt") &
-    :: KIM_SPECIES_NAME_PT
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PT = kim_species_name_type(78)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Au
   !!
   !! \sa KIM::SPECIES_NAME::Au, KIM_SPECIES_NAME_Au
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Au") &
-    :: KIM_SPECIES_NAME_AU
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AU = kim_species_name_type(79)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Hg
   !!
   !! \sa KIM::SPECIES_NAME::Hg, KIM_SPECIES_NAME_Hg
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Hg") &
-    :: KIM_SPECIES_NAME_HG
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_HG = kim_species_name_type(80)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Tl
   !!
   !! \sa KIM::SPECIES_NAME::Tl, KIM_SPECIES_NAME_Tl
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Tl") &
-    :: KIM_SPECIES_NAME_TL
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TL = kim_species_name_type(81)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pb
   !!
   !! \sa KIM::SPECIES_NAME::Pb, KIM_SPECIES_NAME_Pb
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pb") &
-    :: KIM_SPECIES_NAME_PB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PB = kim_species_name_type(82)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Bi
   !!
   !! \sa KIM::SPECIES_NAME::Bi, KIM_SPECIES_NAME_Bi
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Bi") &
-    :: KIM_SPECIES_NAME_BI
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_BI = kim_species_name_type(83)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Po
   !!
   !! \sa KIM::SPECIES_NAME::Po, KIM_SPECIES_NAME_Po
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Po") &
-    :: KIM_SPECIES_NAME_PO
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PO = kim_species_name_type(84)
 
   !> \brief \copybrief KIM::SPECIES_NAME::At
   !!
   !! \sa KIM::SPECIES_NAME::At, KIM_SPECIES_NAME_At
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_At") &
-    :: KIM_SPECIES_NAME_AT
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AT = kim_species_name_type(85)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Rn
   !!
   !! \sa KIM::SPECIES_NAME::Rn, KIM_SPECIES_NAME_Rn
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Rn") &
-    :: KIM_SPECIES_NAME_RN
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RN = kim_species_name_type(86)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Fr
   !!
   !! \sa KIM::SPECIES_NAME::Fr, KIM_SPECIES_NAME_Fr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Fr") &
-    :: KIM_SPECIES_NAME_FR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_FR = kim_species_name_type(87)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ra
   !!
   !! \sa KIM::SPECIES_NAME::Ra, KIM_SPECIES_NAME_Ra
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ra") &
-    :: KIM_SPECIES_NAME_RA
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RA = kim_species_name_type(88)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ac
   !!
   !! \sa KIM::SPECIES_NAME::Ac, KIM_SPECIES_NAME_Ac
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ac") &
-    :: KIM_SPECIES_NAME_AC
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AC = kim_species_name_type(89)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Th
   !!
   !! \sa KIM::SPECIES_NAME::Th, KIM_SPECIES_NAME_Th
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Th") &
-    :: KIM_SPECIES_NAME_TH
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TH = kim_species_name_type(90)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pa
   !!
   !! \sa KIM::SPECIES_NAME::Pa, KIM_SPECIES_NAME_Pa
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pa") &
-    :: KIM_SPECIES_NAME_PA
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PA = kim_species_name_type(91)
 
   !> \brief \copybrief KIM::SPECIES_NAME::U
   !!
   !! \sa KIM::SPECIES_NAME::U, KIM_SPECIES_NAME_U
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_U") &
-    :: KIM_SPECIES_NAME_U
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_U = kim_species_name_type(92)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Np
   !!
   !! \sa KIM::SPECIES_NAME::Np, KIM_SPECIES_NAME_Np
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Np") &
-    :: KIM_SPECIES_NAME_NP
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NP = kim_species_name_type(93)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Pu
   !!
   !! \sa KIM::SPECIES_NAME::Pu, KIM_SPECIES_NAME_Pu
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Pu") &
-    :: KIM_SPECIES_NAME_PU
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_PU = kim_species_name_type(94)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Am
   !!
   !! \sa KIM::SPECIES_NAME::Am, KIM_SPECIES_NAME_Am
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Am") &
-    :: KIM_SPECIES_NAME_AM
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_AM = kim_species_name_type(95)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cm
   !!
   !! \sa KIM::SPECIES_NAME::Cm, KIM_SPECIES_NAME_Cm
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cm") &
-    :: KIM_SPECIES_NAME_CM
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CM = kim_species_name_type(96)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Bk
   !!
   !! \sa KIM::SPECIES_NAME::Bk, KIM_SPECIES_NAME_Bk
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Bk") &
-    :: KIM_SPECIES_NAME_BK
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_BK = kim_species_name_type(97)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cf
   !!
   !! \sa KIM::SPECIES_NAME::Cf, KIM_SPECIES_NAME_Cf
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cf") &
-    :: KIM_SPECIES_NAME_CF
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CF = kim_species_name_type(98)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Es
   !!
   !! \sa KIM::SPECIES_NAME::Es, KIM_SPECIES_NAME_Es
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Es") &
-    :: KIM_SPECIES_NAME_ES
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_ES = kim_species_name_type(99)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Fm
   !!
   !! \sa KIM::SPECIES_NAME::Fm, KIM_SPECIES_NAME_Fm
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Fm") &
-    :: KIM_SPECIES_NAME_FM
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_FM = kim_species_name_type(100)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Md
   !!
   !! \sa KIM::SPECIES_NAME::Md, KIM_SPECIES_NAME_Md
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Md") &
-    :: KIM_SPECIES_NAME_MD
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_MD = kim_species_name_type(101)
 
   !> \brief \copybrief KIM::SPECIES_NAME::No
   !!
   !! \sa KIM::SPECIES_NAME::No, KIM_SPECIES_NAME_No
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_No") &
-    :: KIM_SPECIES_NAME_NO
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NO = kim_species_name_type(102)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Lr
   !!
   !! \sa KIM::SPECIES_NAME::Lr, KIM_SPECIES_NAME_Lr
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Lr") &
-    :: KIM_SPECIES_NAME_LR
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_LR = kim_species_name_type(103)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Rf
   !!
   !! \sa KIM::SPECIES_NAME::Rf, KIM_SPECIES_NAME_Rf
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Rf") &
-    :: KIM_SPECIES_NAME_RF
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RF = kim_species_name_type(104)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Db
   !!
   !! \sa KIM::SPECIES_NAME::Db, KIM_SPECIES_NAME_Db
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Db") &
-    :: KIM_SPECIES_NAME_DB
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_DB = kim_species_name_type(105)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Sg
   !!
   !! \sa KIM::SPECIES_NAME::Sg, KIM_SPECIES_NAME_Sg
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Sg") &
-    :: KIM_SPECIES_NAME_SG
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_SG = kim_species_name_type(106)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Bh
   !!
   !! \sa KIM::SPECIES_NAME::Bh, KIM_SPECIES_NAME_Bh
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Bh") &
-    :: KIM_SPECIES_NAME_BH
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_BH = kim_species_name_type(107)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Hs
   !!
   !! \sa KIM::SPECIES_NAME::Hs, KIM_SPECIES_NAME_Hs
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Hs") &
-    :: KIM_SPECIES_NAME_HS
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_HS = kim_species_name_type(108)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Mt
   !!
   !! \sa KIM::SPECIES_NAME::Mt, KIM_SPECIES_NAME_Mt
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Mt") &
-    :: KIM_SPECIES_NAME_MT
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_MT = kim_species_name_type(109)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ds
   !!
   !! \sa KIM::SPECIES_NAME::Ds, KIM_SPECIES_NAME_Ds
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ds") &
-    :: KIM_SPECIES_NAME_DS
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_DS = kim_species_name_type(110)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Rg
   !!
   !! \sa KIM::SPECIES_NAME::Rg, KIM_SPECIES_NAME_Rg
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Rg") &
-    :: KIM_SPECIES_NAME_RG
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_RG = kim_species_name_type(111)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Cn
   !!
   !! \sa KIM::SPECIES_NAME::Cn, KIM_SPECIES_NAME_Cn
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Cn") &
-    :: KIM_SPECIES_NAME_CN
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_CN = kim_species_name_type(112)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Nh
   !!
   !! \sa KIM::SPECIES_NAME::Nh, KIM_SPECIES_NAME_Nh
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Nh") &
-    :: KIM_SPECIES_NAME_NH
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_NH = kim_species_name_type(113)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Fl
   !!
   !! \sa KIM::SPECIES_NAME::Fl, KIM_SPECIES_NAME_Fl
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Fl") &
-    :: KIM_SPECIES_NAME_FL
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_FL = kim_species_name_type(114)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Mc
   !!
   !! \sa KIM::SPECIES_NAME::Mc, KIM_SPECIES_NAME_Mc
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Mc") &
-    :: KIM_SPECIES_NAME_MC
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_MC = kim_species_name_type(115)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Lv
   !!
   !! \sa KIM::SPECIES_NAME::Lv, KIM_SPECIES_NAME_Lv
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Lv") &
-    :: KIM_SPECIES_NAME_LV
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_LV = kim_species_name_type(116)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Ts
   !!
   !! \sa KIM::SPECIES_NAME::Ts, KIM_SPECIES_NAME_Ts
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Ts") &
-    :: KIM_SPECIES_NAME_TS
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_TS = kim_species_name_type(117)
 
   !> \brief \copybrief KIM::SPECIES_NAME::Og
   !!
   !! \sa KIM::SPECIES_NAME::Og, KIM_SPECIES_NAME_Og
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_Og") &
-    :: KIM_SPECIES_NAME_OG
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_OG = kim_species_name_type(118)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user01
   !!
   !! \sa KIM::SPECIES_NAME::user01, KIM_SPECIES_NAME_user01
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user01") &
-    :: KIM_SPECIES_NAME_USER01
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER01 = kim_species_name_type(201)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user02
   !!
   !! \sa KIM::SPECIES_NAME::user02, KIM_SPECIES_NAME_user02
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user02") &
-    :: KIM_SPECIES_NAME_USER02
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER02 = kim_species_name_type(202)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user03
   !!
   !! \sa KIM::SPECIES_NAME::user03, KIM_SPECIES_NAME_user03
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user03") &
-    :: KIM_SPECIES_NAME_USER03
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER03 = kim_species_name_type(203)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user04
   !!
   !! \sa KIM::SPECIES_NAME::user04, KIM_SPECIES_NAME_user04
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user04") &
-    :: KIM_SPECIES_NAME_USER04
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER04 = kim_species_name_type(204)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user05
   !!
   !! \sa KIM::SPECIES_NAME::user05, KIM_SPECIES_NAME_user05
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user05") &
-    :: KIM_SPECIES_NAME_USER05
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER05 = kim_species_name_type(205)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user06
   !!
   !! \sa KIM::SPECIES_NAME::user06, KIM_SPECIES_NAME_user06
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user06") &
-    :: KIM_SPECIES_NAME_USER06
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER06 = kim_species_name_type(206)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user07
   !!
   !! \sa KIM::SPECIES_NAME::user07, KIM_SPECIES_NAME_user07
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user07") &
-    :: KIM_SPECIES_NAME_USER07
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER07 = kim_species_name_type(207)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user08
   !!
   !! \sa KIM::SPECIES_NAME::user08, KIM_SPECIES_NAME_user08
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user08") &
-    :: KIM_SPECIES_NAME_USER08
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER08 = kim_species_name_type(208)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user09
   !!
   !! \sa KIM::SPECIES_NAME::user09, KIM_SPECIES_NAME_user09
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user09") &
-    :: KIM_SPECIES_NAME_USER09
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER09 = kim_species_name_type(209)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user10
   !!
   !! \sa KIM::SPECIES_NAME::user10, KIM_SPECIES_NAME_user10
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user10") &
-    :: KIM_SPECIES_NAME_USER10
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER10 = kim_species_name_type(210)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user11
   !!
   !! \sa KIM::SPECIES_NAME::user11, KIM_SPECIES_NAME_user11
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user11") &
-    :: KIM_SPECIES_NAME_USER11
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER11 = kim_species_name_type(211)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user12
   !!
   !! \sa KIM::SPECIES_NAME::user12, KIM_SPECIES_NAME_user12
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user12") &
-    :: KIM_SPECIES_NAME_USER12
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER12 = kim_species_name_type(212)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user13
   !!
   !! \sa KIM::SPECIES_NAME::user13, KIM_SPECIES_NAME_user13
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user13") &
-    :: KIM_SPECIES_NAME_USER13
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER13 = kim_species_name_type(213)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user14
   !!
   !! \sa KIM::SPECIES_NAME::user14, KIM_SPECIES_NAME_user14
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user14") &
-    :: KIM_SPECIES_NAME_USER14
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER14 = kim_species_name_type(214)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user15
   !!
   !! \sa KIM::SPECIES_NAME::user15, KIM_SPECIES_NAME_user15
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user15") &
-    :: KIM_SPECIES_NAME_USER15
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER15 = kim_species_name_type(215)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user16
   !!
   !! \sa KIM::SPECIES_NAME::user16, KIM_SPECIES_NAME_user16
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user16") &
-    :: KIM_SPECIES_NAME_USER16
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER16 = kim_species_name_type(216)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user17
   !!
   !! \sa KIM::SPECIES_NAME::user17, KIM_SPECIES_NAME_user17
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user17") &
-    :: KIM_SPECIES_NAME_USER17
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER17 = kim_species_name_type(217)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user18
   !!
   !! \sa KIM::SPECIES_NAME::user18, KIM_SPECIES_NAME_user18
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user18") &
-    :: KIM_SPECIES_NAME_USER18
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER18 = kim_species_name_type(218)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user19
   !!
   !! \sa KIM::SPECIES_NAME::user19, KIM_SPECIES_NAME_user19
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user19") &
-    :: KIM_SPECIES_NAME_USER19
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER19 = kim_species_name_type(219)
 
   !> \brief \copybrief KIM::SPECIES_NAME::user20
   !!
   !! \sa KIM::SPECIES_NAME::user20, KIM_SPECIES_NAME_user20
   !!
   !! \since 2.0
-  type(kim_species_name_type), protected, save, &
-    bind(c, name="KIM_SPECIES_NAME_user20") &
-    :: KIM_SPECIES_NAME_USER20
+  type(kim_species_name_type), parameter :: &
+    KIM_SPECIES_NAME_USER20 = kim_species_name_type(220)
 
   !> \brief \copybrief KIM::SpeciesName::Known
   !!

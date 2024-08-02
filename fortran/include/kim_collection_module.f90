@@ -54,11 +54,6 @@ module kim_collection_module
     kim_get_number_of_collections, &
     kim_get_collection
 
-  !> \brief \copybrief KIM::Collection
-  !!
-  !! \sa KIM::Collection, KIM_Collection
-  !!
-  !! \since 2.1
   type, bind(c) :: kim_collection_type
     !> \brief \copybrief KIM::Collection::collectionID
     !!
@@ -73,18 +68,16 @@ module kim_collection_module
   !! \sa KIM::COLLECTION::system, KIM_COLLECTION_system
   !!
   !! \since 2.1
-  type(kim_collection_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_system") &
-    :: KIM_COLLECTION_SYSTEM
+  type(kim_collection_type), parameter :: &
+    KIM_COLLECTION_SYSTEM = kim_collection_type(0)
 
   !> \brief \copybrief KIM::COLLECTION::user
   !!
   !! \sa KIM::COLLECTION::user, KIM_COLLECTION_user
   !!
   !! \since 2.1
-  type(kim_collection_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_user") &
-    :: KIM_COLLECTION_USER
+  type(kim_collection_type), parameter :: &
+    KIM_COLLECTION_USER = kim_collection_type(1)
 
   !> \brief \copybrief KIM::COLLECTION::environmentVariable
   !!
@@ -92,9 +85,8 @@ module kim_collection_module
   !! KIM_COLLECTION_environmentVariable
   !!
   !! \since 2.1
-  type(kim_collection_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_environmentVariable") &
-    :: KIM_COLLECTION_ENVIRONMENT_VARIABLE
+  type(kim_collection_type), parameter :: &
+    KIM_COLLECTION_ENVIRONMENT_VARIABLE = kim_collection_type(2)
 
   !> \brief \copybrief KIM::COLLECTION::currentWorkingDirectory
   !!
@@ -102,9 +94,8 @@ module kim_collection_module
   !! KIM_COLLECTION_currentWorkingDirectory
   !!
   !! \since 2.1
-  type(kim_collection_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_currentWorkingDirectory") &
-    :: KIM_COLLECTION_CURRENT_WORKING_DIRECTORY
+  type(kim_collection_type), parameter :: &
+    KIM_COLLECTION_CURRENT_WORKING_DIRECTORY = kim_collection_type(3)
 
   !> \brief \copybrief KIM::Collection::Known
   !!

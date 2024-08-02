@@ -74,9 +74,8 @@ module kim_compute_callback_name_module
   !! KIM_COMPUTE_CALLBACK_NAME_GetNeighborList
   !!
   !! \since 2.0
-  type(kim_compute_callback_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_CALLBACK_NAME_GetNeighborList") &
-    :: KIM_COMPUTE_CALLBACK_NAME_GET_NEIGHBOR_LIST
+  type(kim_compute_callback_name_type), parameter :: &
+    KIM_COMPUTE_CALLBACK_NAME_GET_NEIGHBOR_LIST = kim_compute_callback_name_type(0)
 
   !> \brief \copybrief KIM::COMPUTE_CALLBACK_NAME::ProcessDEDrTerm
   !!
@@ -84,9 +83,8 @@ module kim_compute_callback_name_module
   !! KIM_COMPUTE_CALLBACK_NAME_ProcessDEDrTerm
   !!
   !! \since 2.0
-  type(kim_compute_callback_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_CALLBACK_NAME_ProcessDEDrTerm") &
-    :: KIM_COMPUTE_CALLBACK_NAME_PROCESS_DEDR_TERM
+  type(kim_compute_callback_name_type), parameter :: &
+    KIM_COMPUTE_CALLBACK_NAME_PROCESS_DEDR_TERM = kim_compute_callback_name_type(1)
 
   !> \brief \copybrief KIM::COMPUTE_CALLBACK_NAME::ProcessD2EDr2Term
   !!
@@ -94,9 +92,8 @@ module kim_compute_callback_name_module
   !! KIM_COMPUTE_CALLBACK_NAME_ProcessD2EDr2Term
   !!
   !! \since 2.0
-  type(kim_compute_callback_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_CALLBACK_NAME_ProcessD2EDr2Term") &
-    :: KIM_COMPUTE_CALLBACK_NAME_PROCESS_D2EDR2_TERM
+  type(kim_compute_callback_name_type), parameter :: &
+    KIM_COMPUTE_CALLBACK_NAME_PROCESS_D2EDR2_TERM = kim_compute_callback_name_type(2)
 
   !> \brief \copybrief KIM::ComputeCallbackName::Known
   !!

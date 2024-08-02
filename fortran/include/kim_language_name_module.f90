@@ -72,27 +72,24 @@ module kim_language_name_module
   !! \sa KIM::LANGUAGE_NAME::cpp, KIM_LANGUAGE_NAME_cpp
   !!
   !! \since 2.0
-  type(kim_language_name_type), protected, save, &
-    bind(c, name="KIM_LANGUAGE_NAME_cpp") &
-    :: KIM_LANGUAGE_NAME_CPP
+  type(kim_language_name_type), parameter :: &
+    KIM_LANGUAGE_NAME_CPP = kim_language_name_type(0)
 
   !> \brief \copybrief KIM::LANGUAGE_NAME::c
   !!
   !! \sa KIM::LANGUAGE_NAME::c, KIM_LANGUAGE_NAME_c
   !!
   !! \since 2.0
-  type(kim_language_name_type), protected, save, &
-    bind(c, name="KIM_LANGUAGE_NAME_c") &
-    :: KIM_LANGUAGE_NAME_C
+  type(kim_language_name_type), parameter :: &
+    KIM_LANGUAGE_NAME_C = kim_language_name_type(1)
 
   !> \brief \copybrief KIM::LANGUAGE_NAME::fortran
   !!
   !! \sa KIM::LANGUAGE_NAME::fortran, KIM_LANGUAGE_NAME_fortran
   !!
   !! \since 2.0
-  type(kim_language_name_type), protected, save, &
-    bind(c, name="KIM_LANGUAGE_NAME_fortran") &
-    :: KIM_LANGUAGE_NAME_FORTRAN
+  type(kim_language_name_type), parameter :: &
+    KIM_LANGUAGE_NAME_FORTRAN = kim_language_name_type(2)
 
   !> \brief \copybrief KIM::LanguageName::Known
   !!

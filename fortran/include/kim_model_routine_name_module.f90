@@ -78,75 +78,67 @@ module kim_model_routine_name_module
   !! \sa KIM::MODEL_ROUTINE_NAME::Create, KIM_MODEL_ROUTINE_NAME_Create
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_Create") &
-    :: KIM_MODEL_ROUTINE_NAME_CREATE
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_CREATE = kim_model_routine_name_type(0)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::ComputeArgumentsCreate
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::ComputeArgumentsCreate,
   !! KIM_MODEL_ROUTINE_NAME_ComputeArgumentsCreate
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_ComputeArgumentsCreate") &
-    :: KIM_MODEL_ROUTINE_NAME_COMPUTE_ARGUMENTS_CREATE
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_COMPUTE_ARGUMENTS_CREATE = kim_model_routine_name_type(1)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::Compute
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::Compute, KIM_MODEL_ROUTINE_NAME_Compute
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_Compute") &
-    :: KIM_MODEL_ROUTINE_NAME_COMPUTE
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_COMPUTE = kim_model_routine_name_type(2)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::Extension
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::Extension, KIM_MODEL_ROUTINE_NAME_Extension
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_Extension") &
-    :: KIM_MODEL_ROUTINE_NAME_EXTENSION
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_EXTENSION = kim_model_routine_name_type(3)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::Refresh
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::Refresh, KIM_MODEL_ROUTINE_NAME_Refresh
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_Refresh") &
-    :: KIM_MODEL_ROUTINE_NAME_REFRESH
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_REFRESH = kim_model_routine_name_type(4)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::WriteParameterizedModel
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::WriteParameterizedModel,
   !! KIM_MODEL_ROUTINE_NAME_WriteParameterizedModel
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_WriteParameterizedModel") &
-    :: KIM_MODEL_ROUTINE_NAME_WRITE_PARAMETERIZED_MODEL
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_WRITE_PARAMETERIZED_MODEL = kim_model_routine_name_type(5)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::ComputeArgumentsDestroy
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::ComputeArgumentsDestroy,
   !! KIM_MODEL_ROUTINE_NAME_ComputeArgumentsDestroy
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_ComputeArgumentsDestroy") &
-    :: KIM_MODEL_ROUTINE_NAME_COMPUTE_ARGUMENTS_DESTROY
-
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_COMPUTE_ARGUMENTS_DESTROY = kim_model_routine_name_type(6)
+  
   !> \brief \copybrief KIM::MODEL_ROUTINE_NAME::Destroy
   !!
   !! \sa KIM::MODEL_ROUTINE_NAME::Destroy, KIM_MODEL_ROUTINE_NAME_Destroy
   !!
   !! \since 2.0
-  type(kim_model_routine_name_type), protected, save, &
-    bind(c, name="KIM_MODEL_ROUTINE_NAME_Destroy") &
-    :: KIM_MODEL_ROUTINE_NAME_DESTROY
+  type(kim_model_routine_name_type), parameter :: &
+    KIM_MODEL_ROUTINE_NAME_DESTROY = kim_model_routine_name_type(7)
 
   !> \brief \copybrief KIM::ModelRoutineName::Known
   !!

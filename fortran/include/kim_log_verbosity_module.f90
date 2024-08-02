@@ -60,18 +60,13 @@ module kim_log_verbosity_module
     kim_get_number_of_log_verbosities, &
     kim_get_log_verbosity
 
-  !> \brief \copybrief KIM::LogVerbosity
-  !!
-  !! \sa KIM::LogVerbosity, KIM_LogVerbosity
-  !!
-  !! \since 2.0
   type, bind(c) :: kim_log_verbosity_type
     !> \brief \copybrief KIM::LogVerbosity::logVerbosityID
     !!
     !! \sa KIM::LogVerbosity::logVerbosityID, KIM_LogVerbosity::logVerbosityID
     !!
     !! \since 2.0
-    integer(c_int) :: log_verbosity_id
+    integer(c_int) log_verbosity_id
   end type kim_log_verbosity_type
 
   !> \brief \copybrief KIM::LOG_VERBOSITY::silent
@@ -79,54 +74,48 @@ module kim_log_verbosity_module
   !! \sa KIM::LOG_VERBOSITY::silent, KIM_LOG_VERBOSITY_silent
   !!
   !! \since 2.0
-  type(kim_log_verbosity_type), protected, save, &
-    bind(c, name="KIM_LOG_VERBOSITY_silent") &
-    :: KIM_LOG_VERBOSITY_SILENT
+  type(kim_log_verbosity_type), parameter :: &
+    KIM_LOG_VERBOSITY_SILENT = kim_log_verbosity_type(0)
 
   !> \brief \copybrief KIM::LOG_VERBOSITY::fatal
   !!
   !! \sa KIM::LOG_VERBOSITY::fatal, KIM_LOG_VERBOSITY_fatal
   !!
   !! \since 2.0
-  type(kim_log_verbosity_type), protected, save, &
-    bind(c, name="KIM_LOG_VERBOSITY_fatal") &
-    :: KIM_LOG_VERBOSITY_FATAL
+  type(kim_log_verbosity_type), parameter :: &
+    KIM_LOG_VERBOSITY_FATAL = kim_log_verbosity_type(1)
 
   !> \brief \copybrief KIM::LOG_VERBOSITY::error
   !!
   !! \sa KIM::LOG_VERBOSITY::error, KIM_LOG_VERBOSITY_error
   !!
   !! \since 2.0
-  type(kim_log_verbosity_type), protected, save, &
-    bind(c, name="KIM_LOG_VERBOSITY_error") &
-    :: KIM_LOG_VERBOSITY_ERROR
+  type(kim_log_verbosity_type), parameter :: &
+    KIM_LOG_VERBOSITY_ERROR = kim_log_verbosity_type(2)
 
   !> \brief \copybrief KIM::LOG_VERBOSITY::warning
   !!
   !! \sa KIM::LOG_VERBOSITY::warning, KIM_LOG_VERBOSITY_warning
   !!
   !! \since 2.0
-  type(kim_log_verbosity_type), protected, save, &
-    bind(c, name="KIM_LOG_VERBOSITY_warning") &
-    :: KIM_LOG_VERBOSITY_WARNING
+  type(kim_log_verbosity_type), parameter :: &
+    KIM_LOG_VERBOSITY_WARNING = kim_log_verbosity_type(3)
 
   !> \brief \copybrief KIM::LOG_VERBOSITY::information
   !!
   !! \sa KIM::LOG_VERBOSITY::information, KIM_LOG_VERBOSITY_information
   !!
   !! \since 2.0
-  type(kim_log_verbosity_type), protected, save, &
-    bind(c, name="KIM_LOG_VERBOSITY_information") &
-    :: KIM_LOG_VERBOSITY_INFORMATION
+  type(kim_log_verbosity_type), parameter :: &
+    KIM_LOG_VERBOSITY_INFORMATION = kim_log_verbosity_type(4)
 
   !> \brief \copybrief KIM::LOG_VERBOSITY::debug
   !!
   !! \sa KIM::LOG_VERBOSITY::debug, KIM_LOG_VERBOSITY_debug
   !!
   !! \since 2.0
-  type(kim_log_verbosity_type), protected, save, &
-    bind(c, name="KIM_LOG_VERBOSITY_debug") &
-    :: KIM_LOG_VERBOSITY_DEBUG
+  type(kim_log_verbosity_type), parameter :: &
+    KIM_LOG_VERBOSITY_DEBUG = kim_log_verbosity_type(5)
 
   !> \brief \copybrief KIM::LogVerbosity::Known
   !!

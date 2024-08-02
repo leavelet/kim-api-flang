@@ -54,11 +54,7 @@ module kim_charge_unit_module
     kim_get_number_of_charge_units, &
     kim_get_charge_unit
 
-  !> \brief \copybrief KIM::ChargeUnit
-  !!
-  !! \sa KIM::ChargeUnit, KIM_ChargeUnit
-  !!
-  !! \since 2.0
+
   type, bind(c) :: kim_charge_unit_type
     !> \brief \copybrief KIM::ChargeUnit::chargeUnitID
     !!
@@ -73,36 +69,28 @@ module kim_charge_unit_module
   !! \sa KIM::CHARGE_UNIT::unused, KIM_CHARGE_UNIT_unused
   !!
   !! \since 2.0
-  type(kim_charge_unit_type), protected, save, &
-    bind(c, name="KIM_CHARGE_UNIT_unused") &
-    :: KIM_CHARGE_UNIT_UNUSED
+  type(kim_charge_unit_type), parameter :: KIM_CHARGE_UNIT_UNUSED = kim_charge_unit_type(0)
 
   !> \brief \copybrief KIM::CHARGE_UNIT::C
   !!
   !! \sa KIM::CHARGE_UNIT::C, KIM_CHARGE_UNIT_C
   !!
   !! \since 2.0
-  type(kim_charge_unit_type), protected, save, &
-    bind(c, name="KIM_CHARGE_UNIT_c") &
-    :: KIM_CHARGE_UNIT_C
+  type(kim_charge_unit_type), parameter :: KIM_CHARGE_UNIT_C = kim_charge_unit_type(1)
 
   !> \brief \copybrief KIM::CHARGE_UNIT::e
   !!
   !! \sa KIM::CHARGE_UNIT::e, KIM_CHARGE_UNIT_e
   !!
   !! \since 2.0
-  type(kim_charge_unit_type), protected, save, &
-    bind(c, name="KIM_CHARGE_UNIT_e") &
-    :: KIM_CHARGE_UNIT_E
+  type(kim_charge_unit_type), parameter :: KIM_CHARGE_UNIT_E = kim_charge_unit_type(2)
 
   !> \brief \copybrief KIM::CHARGE_UNIT::statC
   !!
   !! \sa KIM::CHARGE_UNIT::statC, KIM_CHARGE_UNIT_statC
   !!
   !! \since 2.0
-  type(kim_charge_unit_type), protected, save, &
-    bind(c, name="KIM_CHARGE_UNIT_statC") &
-    :: KIM_CHARGE_UNIT_STATC
+  type(kim_charge_unit_type), parameter :: KIM_CHARGE_UNIT_STATC = kim_charge_unit_type(3)
 
   !> \brief \copybrief KIM::ChargeUnit::Known
   !!

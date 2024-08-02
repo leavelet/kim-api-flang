@@ -52,12 +52,7 @@ module kim_collection_item_type_module
     kim_to_string, &
     kim_get_number_of_collection_item_types, &
     kim_get_collection_item_type
-
-  !> \brief \copybrief KIM::CollectionItemType
-  !!
-  !! \sa KIM::CollectionItemType, KIM_CollectionItemType
-  !!
-  !! \since 2.1
+    
   type, bind(c) :: kim_collection_item_type_type
     !> \brief \copybrief KIM::CollectionItemType::collectionItemTypeID
     !!
@@ -74,9 +69,8 @@ module kim_collection_item_type_module
   !! KIM_COLLECTION_ITEM_TYPE_modelDriver
   !!
   !! \since 2.1
-  type(kim_collection_item_type_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_ITEM_TYPE_modelDriver") &
-    :: KIM_COLLECTION_ITEM_TYPE_MODEL_DRIVER
+  type(kim_collection_item_type_type), parameter :: &
+    KIM_COLLECTION_ITEM_TYPE_MODEL_DRIVER = kim_collection_item_type_type(0)
 
   !> \brief \copybrief KIM::COLLECTION_ITEM_TYPE::portableModel
   !!
@@ -84,9 +78,8 @@ module kim_collection_item_type_module
   !! KIM_COLLECTION_ITEM_TYPE_portableModel
   !!
   !! \since 2.1
-  type(kim_collection_item_type_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_ITEM_TYPE_portableModel") &
-    :: KIM_COLLECTION_ITEM_TYPE_PORTABLE_MODEL
+  type(kim_collection_item_type_type), parameter :: &
+    KIM_COLLECTION_ITEM_TYPE_PORTABLE_MODEL = kim_collection_item_type_type(1)
 
   !> \brief \copybrief KIM::COLLECTION_ITEM_TYPE::simulatorModel
   !!
@@ -94,9 +87,8 @@ module kim_collection_item_type_module
   !! KIM_COLLECTION_ITEM_TYPE_simulatorModel
   !!
   !! \since 2.1
-  type(kim_collection_item_type_type), protected, save, &
-    bind(c, name="KIM_COLLECTION_ITEM_TYPE_simulatorModel") &
-    :: KIM_COLLECTION_ITEM_TYPE_SIMULATOR_MODEL
+  type(kim_collection_item_type_type), parameter :: &
+    KIM_COLLECTION_ITEM_TYPE_SIMULATOR_MODEL = kim_collection_item_type_type(2)
 
   !> \brief \copybrief KIM::CollectionItemType::Known
   !!

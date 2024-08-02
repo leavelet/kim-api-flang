@@ -74,37 +74,33 @@ module kim_support_status_module
   !! \sa KIM::SUPPORT_STATUS::requiredByAPI, KIM_SUPPORT_STATUS_requiredByAPI
   !!
   !! \since 2.0
-  type(kim_support_status_type), protected, save, &
-    bind(c, name="KIM_SUPPORT_STATUS_requiredByAPI") &
-    :: KIM_SUPPORT_STATUS_REQUIRED_BY_API
+  type(kim_support_status_type), parameter :: &
+    KIM_SUPPORT_STATUS_REQUIRED_BY_API = kim_support_status_type(0)
 
   !> \brief \copybrief KIM::SUPPORT_STATUS::notSupported
   !!
   !! \sa KIM::SUPPORT_STATUS::notSupported, KIM_SUPPORT_STATUS_notSupported
   !!
   !! \since 2.0
-  type(kim_support_status_type), protected, save, &
-    bind(c, name="KIM_SUPPORT_STATUS_notSupported") &
-    :: KIM_SUPPORT_STATUS_NOT_SUPPORTED
+  type(kim_support_status_type), parameter :: &
+    KIM_SUPPORT_STATUS_NOT_SUPPORTED = kim_support_status_type(1)
 
   !> \brief \copybrief KIM::SUPPORT_STATUS::required
   !!
   !! \sa KIM::SUPPORT_STATUS::required, KIM_SUPPORT_STATUS_required
   !!
   !! \since 2.0
-  type(kim_support_status_type), protected, save, &
-    bind(c, name="KIM_SUPPORT_STATUS_required") &
-    :: KIM_SUPPORT_STATUS_REQUIRED
+  type(kim_support_status_type), parameter :: &
+    KIM_SUPPORT_STATUS_REQUIRED = kim_support_status_type(2)
 
   !> \brief \copybrief KIM::SUPPORT_STATUS::optional
   !!
   !! \sa KIM::SUPPORT_STATUS::optional, KIM_SUPPORT_STATUS_optional
   !!
   !! \since 2.0
-  type(kim_support_status_type), protected, save, &
-    bind(c, name="KIM_SUPPORT_STATUS_optional") &
-    :: KIM_SUPPORT_STATUS_OPTIONAL
-
+  type(kim_support_status_type), parameter :: &
+    KIM_SUPPORT_STATUS_OPTIONAL = kim_support_status_type(3)
+    
   !> \brief \copybrief KIM::SupportStatus::Known
   !!
   !! \sa KIM::SupportStatus::Known, KIM_SupportStatus_Known

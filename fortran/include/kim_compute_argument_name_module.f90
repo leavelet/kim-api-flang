@@ -60,11 +60,6 @@ module kim_compute_argument_name_module
     kim_get_compute_argument_name, &
     kim_get_compute_argument_data_type
 
-  !> \brief \copybrief KIM::ComputeArgumentName
-  !!
-  !! \sa KIM::ComputeArgumentName, KIM_ComputeArgumentName
-  !!
-  !! \since 2.0
   type, bind(c) :: kim_compute_argument_name_type
     !> \brief \copybrief KIM::ComputeArgumentName::computeArgumentNameID
     !!
@@ -81,9 +76,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_numberOfParticles
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_numberOfParticles") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_NUMBER_OF_PARTICLES
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_NUMBER_OF_PARTICLES = kim_compute_argument_name_type(0)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::particleSpeciesCodes
   !!
@@ -91,9 +85,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_particleSpeciesCodes
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_particleSpeciesCodes") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTICLE_SPECIES_CODES
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTICLE_SPECIES_CODES = kim_compute_argument_name_type(1)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::particleContributing
   !!
@@ -101,9 +94,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_particleContributing
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_particleContributing") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTICLE_CONTRIBUTING
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTICLE_CONTRIBUTING = kim_compute_argument_name_type(2)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::coordinates
   !!
@@ -111,9 +103,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_coordinates
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_coordinates") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_COORDINATES
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_COORDINATES = kim_compute_argument_name_type(3)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::partialEnergy
   !!
@@ -121,9 +112,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_partialEnergy
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_partialEnergy") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_ENERGY
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_ENERGY = kim_compute_argument_name_type(4)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::partialForces
   !!
@@ -131,9 +121,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_partialForces
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_partialForces") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_FORCES
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_FORCES = kim_compute_argument_name_type(5)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::partialParticleEnergy
   !!
@@ -141,9 +130,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_partialParticleEnergy
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_partialParticleEnergy") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_PARTICLE_ENERGY
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_PARTICLE_ENERGY = kim_compute_argument_name_type(6)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::partialVirial
   !!
@@ -151,9 +139,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_partialVirial
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_partialVirial") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_VIRIAL
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_VIRIAL = kim_compute_argument_name_type(7)
 
   !> \brief \copybrief KIM::COMPUTE_ARGUMENT_NAME::partialParticleVirial
   !!
@@ -161,9 +148,8 @@ module kim_compute_argument_name_module
   !! KIM_COMPUTE_ARGUMENT_NAME_partialParticleVirial
   !!
   !! \since 2.0
-  type(kim_compute_argument_name_type), protected, save, &
-    bind(c, name="KIM_COMPUTE_ARGUMENT_NAME_partialParticleVirial") &
-    :: KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_PARTICLE_VIRIAL
+  type(kim_compute_argument_name_type), parameter :: &
+    KIM_COMPUTE_ARGUMENT_NAME_PARTIAL_PARTICLE_VIRIAL = kim_compute_argument_name_type(8)
 
   !> \brief \copybrief KIM::ComputeArgumentName::Known
   !!

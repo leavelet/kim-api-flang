@@ -72,18 +72,16 @@ module kim_temperature_unit_module
   !! \sa KIM::TEMPERATURE_UNIT::, KIM_TEMPERATURE_UNIT_unused
   !!
   !! \since 2.0
-  type(kim_temperature_unit_type), protected, save, &
-    bind(c, name="KIM_TEMPERATURE_UNIT_unused") &
-    :: KIM_TEMPERATURE_UNIT_UNUSED
+  type(kim_temperature_unit_type), parameter :: &
+    KIM_TEMPERATURE_UNIT_UNUSED = kim_temperature_unit_type(0)
 
   !> \brief \copybrief KIM::TEMPERATURE_UNIT::K
   !!
   !! \sa KIM::TEMPERATURE_UNIT::K, KIM_TEMPERATURE_UNIT_K
   !!
   !! \since 2.0
-  type(kim_temperature_unit_type), protected, save, &
-    bind(c, name="KIM_TEMPERATURE_UNIT_K") &
-    :: KIM_TEMPERATURE_UNIT_K
+  type(kim_temperature_unit_type), parameter :: &
+    KIM_TEMPERATURE_UNIT_K = kim_temperature_unit_type(1)
 
   !> \brief \copybrief KIM::TemperatureUnit::Known
   !!

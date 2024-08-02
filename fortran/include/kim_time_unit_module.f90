@@ -74,45 +74,40 @@ module kim_time_unit_module
   !! \sa KIM::TIME_UNIT::unused, KIM_TIME_UNIT_unused
   !!
   !! \since 2.0
-  type(kim_time_unit_type), protected, save, &
-    bind(c, name="KIM_TIME_UNIT_unused") &
-    :: KIM_TIME_UNIT_UNUSED
+    type(kim_time_unit_type), parameter :: &
+    KIM_TIME_UNIT_UNUSED = kim_time_unit_type(0)
 
   !> \brief \copybrief KIM::TIME_UNIT::fs
   !!
   !! \sa KIM::TIME_UNIT::fs, KIM_TIME_UNIT_fs
   !!
   !! \since 2.0
-  type(kim_time_unit_type), protected, save, &
-    bind(c, name="KIM_TIME_UNIT_fs") &
-    :: KIM_TIME_UNIT_FS
+  type(kim_time_unit_type), parameter :: &
+    KIM_TIME_UNIT_FS = kim_time_unit_type(1)
 
   !> \brief \copybrief KIM::TIME_UNIT::ps
   !!
   !! \sa KIM::TIME_UNIT::ps, KIM_TIME_UNIT_ps
   !!
   !! \since 2.0
-  type(kim_time_unit_type), protected, save, &
-    bind(c, name="KIM_TIME_UNIT_ps") &
-    :: KIM_TIME_UNIT_PS
+  type(kim_time_unit_type), parameter :: &
+    KIM_TIME_UNIT_PS = kim_time_unit_type(2)
 
   !> \brief \copybrief KIM::TIME_UNIT::ns
   !!
   !! \sa KIM::TIME_UNIT::ns, KIM_TIME_UNIT_ns
   !!
   !! \since 2.0
-  type(kim_time_unit_type), protected, save, &
-    bind(c, name="KIM_TIME_UNIT_ns") &
-    :: KIM_TIME_UNIT_NS
+  type(kim_time_unit_type), parameter :: &
+    KIM_TIME_UNIT_NS = kim_time_unit_type(3)
 
   !> \brief \copybrief KIM::TIME_UNIT::s
   !!
   !! \sa KIM::TIME_UNIT::s, KIM_TIME_UNIT_s
   !!
   !! \since 2.0
-  type(kim_time_unit_type), protected, save, &
-    bind(c, name="KIM_TIME_UNIT_s") &
-    :: KIM_TIME_UNIT_S
+  type(kim_time_unit_type), parameter :: &
+    KIM_TIME_UNIT_S = kim_time_unit_type(4)
 
   !> \brief \copybrief KIM::TimeUnit::Known
   !!

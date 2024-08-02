@@ -71,18 +71,16 @@ module kim_data_type_module
   !! \sa KIM::DATA_TYPE::Integer, KIM_DATA_TYPE_Integer
   !!
   !! \since 2.0
-  type(kim_data_type_type), protected, save, &
-    bind(c, name="KIM_DATA_TYPE_Integer") &
-    :: KIM_DATA_TYPE_INTEGER
+  type(kim_data_type_type), parameter :: &
+    KIM_DATA_TYPE_INTEGER = kim_data_type_type(0)
 
   !> \brief \copybrief KIM::DATA_TYPE::Double
   !!
   !! \sa KIM::DATA_TYPE::Double, KIM_DATA_TYPE_Double
   !!
   !! \since 2.0
-  type(kim_data_type_type), protected, save, &
-    bind(c, name="KIM_DATA_TYPE_Double") &
-    :: KIM_DATA_TYPE_DOUBLE
+  type(kim_data_type_type), parameter :: &
+    KIM_DATA_TYPE_DOUBLE = kim_data_type_type(1)
 
   !> \brief \copybrief KIM::DataType::Known
   !!

@@ -76,63 +76,56 @@ module kim_energy_unit_module
   !! \sa KIM::ENERGY_UNIT::unused, KIM_ENERGY_UNIT_unused
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_unused") &
-    :: KIM_ENERGY_UNIT_UNUSED
-
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_UNUSED = kim_energy_unit_type(0)
+  
   !> \brief \copybrief KIM::ENERGY_UNIT::amu_A2_per_ps2
   !!
   !! \sa KIM::ENERGY_UNIT::amu_A2_per_ps2, KIM_ENERGY_UNIT_amu_A2_per_ps2
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_amu_A2_per_ps2") &
-    :: KIM_ENERGY_UNIT_AMU_A2_PER_PS2
-
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_AMU_A2_PER_PS2 = kim_energy_unit_type(1)
+  
   !> \brief \copybrief KIM::ENERGY_UNIT::erg
   !!
   !! \sa KIM::ENERGY_UNIT::erg, KIM_ENERGY_UNIT_erg
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_erg") &
-    :: KIM_ENERGY_UNIT_ERG
-
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_ERG = kim_energy_unit_type(2)
+  
   !> \brief \copybrief KIM::ENERGY_UNIT::eV
   !!
   !! \sa KIM::ENERGY_UNIT::eV, KIM_ENERGY_UNIT_eV
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_eV") &
-    :: KIM_ENERGY_UNIT_EV
-
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_EV = kim_energy_unit_type(3)
+  
   !> \brief \copybrief KIM::ENERGY_UNIT::Hartree
   !!
   !! \sa KIM::ENERGY_UNIT::Hartree, KIM_ENERGY_UNIT_Hartree
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_Hartree") &
-    :: KIM_ENERGY_UNIT_HARTREE
-
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_HARTREE = kim_energy_unit_type(4)
+  
   !> \brief \copybrief KIM::ENERGY_UNIT::J
   !!
   !! \sa KIM::ENERGY_UNIT::J, KIM_ENERGY_UNIT_J
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_J") &
-    :: KIM_ENERGY_UNIT_J
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_J = kim_energy_unit_type(5)
 
   !> \brief \copybrief KIM::ENERGY_UNIT::kcal_mol
   !!
   !! \sa KIM::ENERGY_UNIT::kcal_mol, KIM_ENERGY_UNIT_kcal_mol
   !!
   !! \since 2.0
-  type(kim_energy_unit_type), protected, save, &
-    bind(c, name="KIM_ENERGY_UNIT_kcal_mol") &
-    :: KIM_ENERGY_UNIT_KCAL_MOL
+  type(kim_energy_unit_type), parameter :: &
+    KIM_ENERGY_UNIT_KCAL_MOL = kim_energy_unit_type(6)
 
   !> \brief \copybrief KIM::EnergyUnit::Known
   !!
